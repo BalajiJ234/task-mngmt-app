@@ -1,0 +1,13 @@
+/MFEs/container-app/node_modules
+/MFEs/task-management-app/node_modules
+/MFEs/task-overview-app/node_modules
+/MFEs/user-profile-app/node_modules
+
+/MS-BE/task-service/node_modules
+/MS-BE/user-service/node_modules
+
+node_modules/
+
+**/node_modules/
+
+*/node_modules/
