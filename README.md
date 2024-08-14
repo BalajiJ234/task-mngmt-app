@@ -38,7 +38,7 @@ _ Task Overview Microfrontend: Displays a dashboard of tasks \* User Profile Mic
 
 ### 3. Camunda BPM Integration
 
-- [-] Install and configure Camunda BPM on your local environment.
+- [x] Install and configure Camunda BPM on your local environment.
 - [ ] Use Camunda Modeler to create BPMN diagrams representing your business workflows, such as task creation, task assignment, and notifications.
 - [ ] Deploy these BPMN process definitions to the Camunda engine using the REST API or Camunda Cockpit.
 
