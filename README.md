@@ -38,15 +38,11 @@ _ Task Overview Microfrontend: Displays a dashboard of tasks \* User Profile Mic
 
 ### 3. Camunda BPM Integration
 
-**Checklist**
-
-- [ ] Install and configure Camunda BPM on your local environment.
+- [-] Install and configure Camunda BPM on your local environment.
 - [ ] Use Camunda Modeler to create BPMN diagrams representing your business workflows, such as task creation, task assignment, and notifications.
 - [ ] Deploy these BPMN process definitions to the Camunda engine using the REST API or Camunda Cockpit.
 
 ### 4. API Development
-
-**Checklist**
 
 - [ ] With Camunda BPM integrated and your workflows defined, develop APIs that interact directly with these workflows:
   - [ ] Task Service:
@@ -61,29 +57,21 @@ _ Task Overview Microfrontend: Displays a dashboard of tasks \* User Profile Mic
 
 ### 5. Testing and Monitoring
 
-**Checklist**
-
 - [ ] Begin writing unit tests for the new API endpoints, ensuring they interact with Camunda as expected.
 - [ ] Test the integration between microservices, Camunda, and the database.
 - [ ] Use tools like Cypress or Postman to perform end-to-end testing of the entire workflow.
 
 ### 6. CI/CD Pipeline Setup
 
-**Checklist**
-
 - [ ] Set up a CI/CD pipeline to automate the build and testing processes.
 - [ ] Deploy the application to a staging or production environment.
 
 ### 7. Advanced Monitoring & Logging
 
-**Checklist**
-
 - [ ] Implement centralized logging for all services, including workflow-related logs from Camunda.
 - [ ] Set up monitoring for both the Node.js microservices and the Camunda BPM engine.
 
 ### 8. Final Deployment and Documentation
-
-**Checklist**
 
 - [ ] Containerize all services using Docker and deploy to a cloud platform like AWS, Azure, or Google Cloud.
 - [ ] Ensure that all workflows, APIs, and integration points are well-documented.
