@@ -38,63 +38,52 @@ _ Task Overview Microfrontend: Displays a dashboard of tasks \* User Profile Mic
 
 ### 3. Camunda BPM Integration
 
-Integrating Camunda BPM at this stage allows you to establish business processes that your APIs will later interact with.
+**Checklist**
 
-### 3. Camunda BPM Integration
-
-Set Up Camunda BPM:
-
-1. Install and configure Camunda BPM on your local environment.
-2. Camunda Modeler: Use Camunda Modeler to create BPMN diagrams representing your business workflows, such as task creation, task assignment, and notifications.
-3. Deploy BPMN Diagrams: Deploy these BPMN process definitions to the Camunda engine using the REST API or Camunda Cockpit.
-
-Modeling Workflows:
-
-- Task Workflow: Create a BPMN diagram that defines the lifecycle of a task, from creation to completion, including user approvals and deadlines.
-- User Registration Workflow: Define a process that handles user registration, email verification, and account activation.
-- Notification Workflow: Model a process that triggers notifications based on task statuses or deadlines.
-
-Deploy and Test Workflows:
-
-1. Use the Camunda REST API to deploy and start process instances.
-2. Test the workflows independently to ensure they behave as expected.
+- [ ] Install and configure Camunda BPM on your local environment.
+- [ ] Use Camunda Modeler to create BPMN diagrams representing your business workflows, such as task creation, task assignment, and notifications.
+- [ ] Deploy these BPMN process definitions to the Camunda engine using the REST API or Camunda Cockpit.
 
 ### 4. API Development
 
-With Camunda BPM integrated and your workflows defined, you can now develop APIs that interact directly with these workflows:
+**Checklist**
 
-Task Service:
-
-- API Endpoints: Develop endpoints that trigger Camunda processes when tasks are created or updated.
-- Task Completion: Ensure tasks are marked complete within the workflow and the database.
-
-User Service:
-
-- API Endpoints: Develop endpoints for user registration and login, integrated with the Camunda workflow for processes like email verification.
-- Task Assignment: Create endpoints to assign tasks to users as part of the workflow.
-
-Notification Service:
-
-- API Endpoints: Develop endpoints that listen for workflow events (e.g., task deadlines) and trigger notifications accordingly.
-- Workflow Integration: Ensure that notifications are sent based on events in the Camunda workflow.
+- [ ] With Camunda BPM integrated and your workflows defined, develop APIs that interact directly with these workflows:
+  - [ ] Task Service:
+    - [ ] Develop endpoints that trigger Camunda processes when tasks are created or updated.
+    - [ ] Ensure tasks are marked complete within the workflow and the database.
+  - [ ] User Service:
+    - [ ] Develop endpoints for user registration and login, integrated with the Camunda workflow for processes like email verification.
+    - [ ] Create endpoints to assign tasks to users as part of the workflow.
+  - [ ] Notification Service:
+    - [ ] Develop endpoints that listen for workflow events (e.g., task deadlines) and trigger notifications accordingly.
+    - [ ] Ensure that notifications are sent based on events in the Camunda workflow.
 
 ### 5. Testing and Monitoring
 
-- Unit Testing: Begin writing unit tests for the new API endpoints, ensuring they interact with Camunda as expected.
-- Integration Testing: Test the integration between microservices, Camunda, and the database.
-- End-to-End Testing: Use tools like Cypress or Postman to perform end-to-end testing of the entire workflow.
+**Checklist**
+
+- [ ] Begin writing unit tests for the new API endpoints, ensuring they interact with Camunda as expected.
+- [ ] Test the integration between microservices, Camunda, and the database.
+- [ ] Use tools like Cypress or Postman to perform end-to-end testing of the entire workflow.
 
 ### 6. CI/CD Pipeline Setup
 
-- Automated Builds and Testing: Set up a CI/CD pipeline to automate the build and testing processes.
-- Deployment: Deploy the application to a staging or production environment.
+**Checklist**
+
+- [ ] Set up a CI/CD pipeline to automate the build and testing processes.
+- [ ] Deploy the application to a staging or production environment.
 
 ### 7. Advanced Monitoring & Logging
 
-- Logging: Implement centralized logging for all services, including workflow-related logs from Camunda.
-- Monitoring: Set up monitoring for both the Node.js microservices and the Camunda BPM engine.
+**Checklist**
+
+- [ ] Implement centralized logging for all services, including workflow-related logs from Camunda.
+- [ ] Set up monitoring for both the Node.js microservices and the Camunda BPM engine.
 
 ### 8. Final Deployment and Documentation
 
-- Deployment: Containerize all services using Docker and deploy to a cloud platform like AWS, Azure, or Google Cloud.
-- Documentation: Ensure that all workflows, APIs, and integration points are well-documented.
+**Checklist**
+
+- [ ] Containerize all services using Docker and deploy to a cloud platform like AWS, Azure, or Google Cloud.
+- [ ] Ensure that all workflows, APIs, and integration points are well-documented.
