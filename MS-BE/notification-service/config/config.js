@@ -3,22 +3,29 @@ module.exports = {
     username: "sa",
     password: "124253BrJd",
     database: "todo_db",
-    host: "127.0.0.1",
+    host: "localhost",
     dialect: "mssql",
+    port: 1433,
     logging: false, // Disable SQL query logging
+    dialectOptions: {
+      options: {
+        encrypt: false, // Set to false if not using SSL/TLS
+        trustServerCertificate: true, // Necessary if SSL/TLS is disabled
+      },
+    },
   },
   test: {
     username: "sa",
     password: "124253BrJd",
     database: "todo_db_test",
-    host: "127.0.0.1",
+    host: "localhost",
     dialect: "mssql",
   },
   production: {
     username: "sa",
     password: "124253BrJd",
     database: "todo_db_prod",
-    host: "127.0.0.1",
+    host: "localhost",
     dialect: "mssql",
   },
 };

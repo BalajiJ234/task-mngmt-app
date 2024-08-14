@@ -1,26 +1,26 @@
 "use strict";
 
-"use strict";
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("Tasks", {
+    await queryInterface.createTable("Notifications", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      title: {
-        type: Sequelize.STRING,
+      taskId: {
+        type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: "Tasks", // Assumes the Tasks table exists and is referenced
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
-      description: {
-        type: Sequelize.TEXT,
-        allowNull: true,
-      },
-      dueDate: {
-        type: Sequelize.DATE,
+      message: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       status: {
@@ -41,6 +41,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("Tasks");
+    await queryInterface.dropTable("Notifications");
   },
 };

@@ -1,11 +1,14 @@
 const express = require("express");
 const { Sequelize, DataTypes } = require("sequelize");
-const sequelize = new Sequelize(
-  "mssql://username:password@localhost:1433/todo_db"
-);
+const sequelize = new Sequelize("mssql://sa:124253BrJd@localhost:1433/todo_db");
 
 const app = express();
 app.use(express.json());
+
+sequelize
+  .authenticate()
+  .then(() => console.log("Database connected..."))
+  .catch((err) => console.log("Error: " + err));
 
 const Notification = sequelize.define("Notification", {
   taskId: {
