@@ -5,6 +5,32 @@ const sequelize = new Sequelize("mssql://sa:124253BrJd@localhost:1433/todo_db");
 const app = express();
 app.use(express.json());
 
+const RedisStore = require("connect-redis")(session);
+const redis = require("redis");
+
+const redisClient = redis.createClient({
+  host: "localhost", // Replace with your Redis server host if different
+  port: 6379, // Default Redis port
+});
+
+redisClient.on("error", (err) => {
+  console.error("Redis error: ", err);
+});
+
+app.use(
+  session({
+    store: new RedisStore({ client: redisClient }),
+    secret: "L3LwGfcSzYF/JKmhbQzIMUEcKKLSv1mi7hf5aELOhnY=", // Replace with your secret key
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: false, // Set to true if using HTTPS
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24, // Session expiration (1 day in this example)
+    },
+  })
+);
+
 sequelize
   .authenticate()
   .then(() => console.log("Database connected..."))
