@@ -1,0 +1,27 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Docker-related files
+docker-compose.override.yml
+.env
+.dockerignore
+
+# Logs & Build Artifacts
+logs/
+*.log
+npm-debug.log*
+dist/
+build/
+coverage/
+
+# VSCode/Editor files
+.vscode/
+.idea/
+*.swp
+
+# Ignore local environment variables
+.env.local
+.env.development
+.env.production
